@@ -2,16 +2,17 @@
 // Welcome to Astro! Everything between these triple-dash code fences
 // is your "component frontmatter". It never runs in the browser.
 console.log('This runs in your terminal, not the browser!');
+import DefaultLayout from "@layouts/default.astro";
 ---
 <!-- Below is your "component template." It's just HTML, but with
     some magic sprinkled in to help you build great templates. -->
-<html>
-  <body>
-    <h1>Hello, World!</h1>
-  </body>
-</html>
-<style>
-  h1 {
-    color: orange;
-  }
-</style>
+<DefaultLayout title="Welcome to Astro" path="/">
+    <div class="pt-20">
+        <h1 class="text-center text-5xl font-bold">WebGL training!</h1>
+        <p class="text-center text-lg mt-8">
+            これはWebGLのトレーニング用のページです。<br />
+            ここでは、Three.jsを使用して3Dグラフィックスの作例を掲載します。<br />
+            同じ内容をReact、Vue、Vanillaの各フレームワークで実装しています。<br />
+        </p>
+    </div>
+</DefaultLayout>

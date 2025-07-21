@@ -1,0 +1,27 @@
+---
+import { AppHeader } from "@components/react/AppHeader"
+import "../styles/global.css";
+
+interface Props {
+    title: string;
+    path: `/${string}`;
+}
+
+const { title, path } = Astro.props
+---
+<html lang="ja">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>{ title }</title>
+        <style>
+            @layer base, component, layout, page;
+        </style>
+    </head>
+    <body>
+        <AppHeader path={path} />
+        <main>
+            <slot />
+        </main>
+    </body>
+</html>
